@@ -33,11 +33,13 @@ body {
 }
 
 .btns {
-    display: contents;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     margin-top: 50px;
+    /* width: 700px; */
+    /* height: 150px; */
 }
 
 .btn {
