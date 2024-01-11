@@ -21,15 +21,9 @@
                         window.location.href = "yes.html";
                     }
                     function noNo() {
-                        var x = document.getElementById("noBtn").offsetWidth;
-                        var y = document.getElementById("noBtn").offsetHeight;
-                        var proposed_x = x;
-                        var proposed_y = y;
-                        while ((Math.abs(proposed_x - x) < 400) || (Math.abs(proposed_y - y) < 400)) {
-                            proposed_x = Math.random() * (window.innerWidth - 300);
-                            proposed_y = Math.random() * (window.innerHeight - 150);
-                        }
-                        document.getElementById("noBtn").setAttribute("style", "top: " + proposed_y + "px; left: " + proposed_x + "px;");
+                        x = Math.random() * (window.innerWidth * 0.7);
+                        y = Math.random() * (window.innerHeight * 0.7);
+                        document.getElementById("noBtn").setAttribute("style", "top: " + y + "px; left: " + x + "px;");
                     }
                 </script>
             </div>
