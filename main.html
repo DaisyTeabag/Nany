@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1 class="text">Would you go on a date with me?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="./wait.gif" class="gif" style="width: 320px; height: 270px;">
+            </div>
+            <div class="btns">
+                <button class="btn" id="yesBtn" onclick="happyPage()">Yes</button>
+                <div class="divBtnNo" id="noBtn" onmouseover="noNo()">
+                    <button class="btn" onclick="noNo()">No</button>
+                </div>
+                <script>
+                    function happyPage() {
+                        window.location.href = "yes.html";
+                    }
+                    function noNo() {
+                        var x = document.getElementById("noBtn").offsetWidth;
+                        var y = document.getElementById("noBtn").offsetHeight;
+                        var proposed_x = x;
+                        var proposed_y = y;
+                        while ((Math.abs(proposed_x - x) < 400) || (Math.abs(proposed_y - y) < 400)) {
+                            proposed_x = Math.random() * (window.innerWidth - 300);
+                            proposed_y = Math.random() * (window.innerHeight - 150);
+                        }
+                        document.getElementById("noBtn").setAttribute("style", "top: " + proposed_y + "px; left: " + proposed_x + "px;");
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
